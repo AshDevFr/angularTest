@@ -1,0 +1,11 @@
+web:
+  build: .
+  dockerfile: Dockerfile_dev
+  command: serve
+  volumes:
+   - ./src/:/home/workspace/src
+   - ./server/:/home/workspace/server
+   - ./e2e/:/home/workspace/e2e
+  ports:
+   - "3000:3000"
+   - "3010:3010"
